@@ -14,6 +14,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script>
+  // On refresh, always start at the top of the page instead of where you left off
+  (function(){
+    var nav = performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    var isReload = nav ? nav.type === 'reload' : (performance.navigation && performance.navigation.type === 1);
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (!isReload) return;
+    if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    function top(){ window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }
+    top();
+    document.addEventListener('DOMContentLoaded', top);
+    window.addEventListener('load', top);
+  })();
+</script>
+<script>
   // Scroll reveal: hide elements only when JavaScript runs and motion is allowed
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js-reveal');
 </script>
