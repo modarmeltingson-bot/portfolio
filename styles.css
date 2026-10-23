@@ -445,6 +445,23 @@ footer a:hover{color:var(--gold)}
 @keyframes luxRise{to{translate:0 0;opacity:1}}
 @keyframes luxSheen{0%{background-position:var(--bx0) var(--by)}18%{background-position:var(--bx1) var(--by)}100%{background-position:var(--bx1) var(--by)}}
 
+/* ---------- Touch devices: finger-sized tap areas ---------- */
+@media (pointer:coarse){
+  .brand{display:inline-block;padding:10px 0}
+  .nav ul a:not(.cta-sm){display:inline-block;padding:12px 2px}
+  .nav .cta-sm{padding:11px 16px}
+  .visit,.text-link{padding-top:11px;padding-bottom:11px}
+  footer a{display:inline-block;padding:12px 0}
+}
+/* Small phones: keep the Careflow schedule labels readable */
+@media (max-width:480px){
+  .sched{padding:12px}
+  .sched .row{grid-template-columns:60px 1fr;gap:8px}
+  .sched .who{font-size:12.5px}
+  .sched .week{padding-left:68px}
+  .sched .bar i{left:0!important;width:auto!important;max-width:100%;font-size:11px;padding:0 8px}
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width:960px){
   .hero .wrap,.sec-head,.case,.intro .wrap,.contact-grid{grid-template-columns:1fr}
