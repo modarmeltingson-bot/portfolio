@@ -125,7 +125,7 @@ a.visual{text-decoration:none;cursor:pointer}
 .visual .vsub{font-size:14px;opacity:.85;margin-top:6px}
 .visual .vlogo{display:block;width:100%;max-width:340px;height:auto}
 .visual .vlogo-lom{max-width:200px}
-.visual .vlogo-careflow{max-width:230px}
+.visual .vlogo-skyecare{max-width:190px}
 
 /* Engel & Völkers — black, white, red */
 .v-ev{background:#fff;color:#111;border:1px solid var(--line)}
@@ -138,8 +138,8 @@ a.visual{text-decoration:none;cursor:pointer}
 .closing li.now{color:#111}
 .closing li.now span{border-color:#E3001B;background:#E3001B;box-shadow:0 0 0 4px rgba(227,0,27,.15)}
 
-/* Careflow — brand purple + green */
-.v-careflow{background:#FBF4FA;color:#2A1430;border:1px solid #EFDDEC}
+/* Skye Care — brand plum + green */
+.v-skyecare{background:#FBF4FA;color:#2A1430;border:1px solid #EFDDEC}
 .sched{background:#fff;color:#2A1430;border:1px solid #EFDDEC;border-radius:10px;padding:16px;display:grid;gap:8px;font-size:14px;margin-top:28px}
 .sched .row{display:grid;grid-template-columns:96px 1fr;gap:10px;align-items:center}
 .sched .who{font-weight:600}
@@ -453,7 +453,7 @@ footer a:hover{color:var(--gold)}
   .visit,.text-link{padding-top:11px;padding-bottom:11px}
   footer a{display:inline-block;padding:12px 0}
 }
-/* Small phones: keep the Careflow schedule labels readable */
+/* Small phones: keep the Skye Care schedule labels readable */
 @media (max-width:480px){
   .sched{padding:12px}
   .sched .row{grid-template-columns:60px 1fr;gap:8px}
